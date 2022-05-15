@@ -1,0 +1,226 @@
+.test {
+  color: black;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+ /* background-color: #4d3300; */
+  background: url('Houses.jpeg') no-repeat center top;
+
+  height: 100%;
+}
+
+html { 
+  height: 100%;
+}
+
+.center {
+  text-align: center; 
+}
+
+.fa-pencil-square-o {
+  color: rgb(113, 113, 136); 
+  font-size: 20px; 
+  position: relative;
+  top: 2px; 
+  transition: 0.3s; 
+  cursor: pointer;  
+}
+
+.fa-pencil-square-o:hover {
+  color: white;   
+}
+
+.fa-times-circle {
+  color: white; 
+  opacity: 0.5; 
+  font-size: 30px; 
+  margin-left: 10px; 
+  position: relative; 
+  top: 5px; 
+  transition: 0.3s;  
+  cursor: pointer; 
+}
+
+.fa-times-circle:hover {
+  color: rgb(233, 139, 139); 
+}
+
+input {
+  padding: 8px; 
+  border: 1px solid rgb(155, 155, 155); 
+  border-radius: 4px;    
+  margin-right: 7px; 
+  font-size: 14px; 
+  width: calc(100% - 16px);
+}
+
+textarea {
+  padding: 8px; 
+  border: 1px solid rgb(155, 155, 155); 
+  border-radius: 4px; 
+  margin-top: 20px;   
+  margin-right: 7px; 
+  font-size: 14px; 
+  width: 300px; 
+  height: 200px; 
+}
+
+select {
+  padding: 8px; 
+  border: 1px solid rgb(155, 155, 155); 
+  border-radius: 4px; 
+  margin-top: 0px; 
+  margin-bottom: 0px; 
+  margin-right: 7px; 
+  font-size: 14px; 
+  width: 300px; 
+}
+
+button {
+  padding: 10px 20px; 
+  border: 0px; 
+  border-radius: 4px; 
+  margin-top: 10px; 
+  margin-bottom: 10px;
+  transition: 0.3s; 
+  font-size: 14px; 
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.button {
+  padding: 10px 20px; 
+  border: 0px; 
+  border-radius: 4px; 
+  margin-top: 10px; 
+  margin-bottom: 10px;
+  transition: 0.3s; 
+  font-size: 14px; 
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.button-blue {
+  background-color: #80bfff;
+  color: white; 
+  cursor: pointer; 
+}
+.button-blue:hover {
+  background-color: rgb(91, 91, 117); 
+  color: white; 
+}
+
+.button-dark {
+  background-color: rgb(39, 39, 39); 
+  color: white; 
+  cursor: pointer;
+  transition: 0.3s;  
+}
+
+.button-dark:hover {
+  background-color: rgb(48, 48, 48);  
+}
+
+.button-inline { 
+  background-color: rgb(113, 113, 150); 
+  color: white; 
+  cursor: pointer; 
+  display: inline-block; 
+}
+
+.button-inline:hover {
+  background-color: rgb(91, 91, 117); 
+  color: white; 
+}
+
+h1, h2, h3, h4, h5, h6, p, a, label {
+  color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
+}
+
+p, button, a, label {
+  font-family: 'Roboto', sans-serif;
+}
+
+p {
+  line-height: 150%; 
+}
+
+a {
+  text-decoration: none; 
+}
+
+.form-error {
+  margin-top: 15px; 
+  margin-bottom: 0px; 
+  color: rgb(226, 109, 109); 
+}
+
+.form-section {
+  margin-bottom: 20px; 
+}
+
+.form-section-small {
+  margin-bottom: 5px; 
+}
+
+.form-container {
+  margin-bottom: 50px;
+}
+
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use webkit (Chrome, Opera, Safari, Edge) and moz (Firefox) to override default look) */ 
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.limited-width {
+  width: 300px; 
+  margin-top:0px; 
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+@media screen and (max-width: 700px) {
+  input {
+    width: calc(100% - 16px); 
+  }
+  .limited-width {
+    width: 100%;  
+  }
+}
+
+
+

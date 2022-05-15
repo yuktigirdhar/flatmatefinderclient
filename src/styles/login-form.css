@@ -1,0 +1,15 @@
+
+    .login-container {
+        background-color: #9e826b;
+        border-radius: 5px; 
+        padding: 50px;  
+    }
+
+
+@media screen and (max-width: 700px) {
+    .login-container {
+        background-color: rgb(50, 50, 61); 
+        border-radius: none;
+        padding: 0px;     
+    }
+}

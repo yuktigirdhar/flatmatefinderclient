@@ -1,0 +1,71 @@
+.start {
+    display: flex;
+    flex-direction: column;  
+    width: 100%; 
+    box-shadow: 0px 0px 10px #242424; 
+    border-radius: 10px; 
+    overflow: hidden;
+/*    background: url('../images/University.jpeg') no-repeat center top;*/
+}
+
+#1{
+    text-align: center;
+}
+#2{
+    text-align: center;
+}
+#3{
+    text-align: center;
+}
+
+h1 {text-align: center;}
+
+.padding20{
+    padding: 20px;
+}
+
+.section { 
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height:170px; 
+    transition: 0.3s;  
+    margin-bottom: 2px; 
+    cursor: pointer; 
+    background-color:rgb(60, 90, 100);
+}
+
+.section h3 {
+    font-size: 24px; 
+}
+
+.section:hover {
+    background-color:rgb(108, 108, 128);  
+}
+
+@media screen and (max-width: 1000px) {
+    .section h3 {
+        font-size: 22px; 
+    } 
+}
+
+@media screen and (max-width: 700px) {
+    .start {
+        position: absolute; 
+        top: 0px; 
+        bottom: 0px; 
+        left: 0px; 
+        right: 0px; 
+        width: 100%; 
+        height: 100%;  
+        border-radius: 0px; 
+        margin: 0px; 
+        padding: 0px;
+        box-shadow: none;    
+    }
+    
+    .section {  
+        height:33.3vh;  
+    }
+}
