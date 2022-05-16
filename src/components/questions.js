@@ -171,14 +171,14 @@ export class Questions extends React.Component {
     }
 
     return (
-      <div>
+      <div className="profile-cover">
         <form className="profile" onSubmit={this.props.handleSubmit(values =>
           this.onSubmit(values))}>
-          <h1 className="center" >Match Questions</h1>
-          <p className="center" >To help us better match you with potential roommates, please tell us a little bit about yourself and what you're looking for.</p>
+          <h1 className="center">Preference</h1>
+          <p className="center" > Tell us about yourself to help us match roommates</p>
           <br />
           <div className="form-container">
-            <h2>Basic Info</h2>
+            <h2>Personal Information</h2>
             <div className="form-section">
               <label htmlFor="firstName">First Name</label>
               <Field
@@ -223,9 +223,9 @@ export class Questions extends React.Component {
 
           {lookingFor}
 
-          <h2>Personality Profile</h2>
+          <h2>Profile</h2>
           <div className="form-section">
-            <label>Do you own pets?</label>
+            <label>Any pets?</label>
           </div>
           <div className="form-section">
             <label>Yes</label>
@@ -236,7 +236,7 @@ export class Questions extends React.Component {
             <Field name="pets_have" component="input" type="radio" value="false" />     
           </div>
           <div className="form-section">
-            <label htmlFor="pets_bothered">On a scale from 1-5, where 1 is not important and 5 is very important, how important is it to live with someone who doesn't have pets?</label>
+            <label htmlFor="pets_bothered">Select your preference (1-5 where 5 being most imp) to live with someone who doesn't have pets?</label>
           </div>
           <div className="form-section">
           <Field
@@ -247,7 +247,7 @@ export class Questions extends React.Component {
             />
           </div>
           <div className="form-section">
-            <label>Do you listen to loud music, tv, or movies in your living space?</label>
+            <label>Do you listen to loud music, tv, or movies at home?</label>
           </div>
           <div className="form-section">
               <label>Yes</label>

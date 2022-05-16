@@ -20,7 +20,7 @@
 }
 
 .message-container {
-    background-color: rgb(26, 26, 26); 
+    background-color: #9e826b;
     width:  calc(85% - 100px);  
     padding: 50px; 
     margin-top: 0px;
