@@ -168,7 +168,7 @@ export const getSelectedUser = (username) => dispatch => {
 }
 
 export const lookupLatLong = (city, state, address) => dispatch => {
-    return fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${city},+${state},+${address}`, {
+    return fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${city},+${state},+${address}&key=AIzaSyB2U_dmIpTWTbNEOk0pIoRLcsp8dssYwWA`, {
         method: 'GET'
     })
     .then(res => res.json())
@@ -178,7 +178,7 @@ export const lookupLatLong = (city, state, address) => dispatch => {
 }
 
 export const lookupLatLong2 = (city, state) => dispatch => {
-    return fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${city},+${state}`, {
+    return fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${city},+${state}&key=AIzaSyB2U_dmIpTWTbNEOk0pIoRLcsp8dssYwWA`, {
         method: 'GET'
     })
     .then(res => res.json())

@@ -9,7 +9,7 @@ const FaAnchor = require("react-icons/lib/fa/anchor");
 
 const MyMapComponent = compose(
   withProps({
-    googleMapURL: "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyBwm2UUsvnLbL_1gCtrqQeFCIZhMimijQA",
+    googleMapURL: "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyB2U_dmIpTWTbNEOk0pIoRLcsp8dssYwWA",
     loadingElement: <div style={{ height: `100%` }} />,
     containerElement: <div style={{ height: `400px` }} />,
     mapElement: <div style={{ height: `100%` }} />,
