@@ -22,10 +22,18 @@ export class ImageUpload extends React.Component {
     }
 
     handleImageUpload(file) {
-        let upload = request.post(CLOUDINARY_UPLOAD_URL)
-                            .field('upload_preset', CLOUDINARY_UPLOAD_PRESET)
+        console.log(file)
+        let upload = request.post('https://api.cloudinary.com/v1_1/flatmatefinder/image/upload')
+                            .accept('application/json')
+                            .field('upload_preset', 'o73jadvp')
                             .field('file', file);
+
+        console.log(upload)
+
         upload.end((err, response) => {
+        console.log("YUKTI GIRDHAR");
+        console.log(err)
+        console.log(response)
           if (err) {
             console.error(err);
           }
@@ -43,6 +51,7 @@ export class ImageUpload extends React.Component {
           }
         });
     }
+
 
     render() {
         return (
