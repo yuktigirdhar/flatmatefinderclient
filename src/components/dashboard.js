@@ -52,7 +52,10 @@ export class Dashboard extends React.Component {
             <Match key={index} user={match} />
         ));
         const { currentPage, dataPerPage } = this.state;
-
+        for (let i = 0; i < currentMatches.length; i++) {
+                if(currentMatches[i].props.user.username == this.props.currentUser.username)
+                    var spliced = currentMatches.splice(i, 1);
+        }
         const indexOfLastData = currentPage * dataPerPage;
         const indexOfFirstData = indexOfLastData - dataPerPage;
          
@@ -61,7 +64,7 @@ export class Dashboard extends React.Component {
            renderCurrent = <p>Sorry, there are no apartments or roommates that match your search critera.</p>
         }
         else {
-        renderCurrent = currentMatches.slice(indexOfFirstData, indexOfLastData);
+            renderCurrent = currentMatches.slice(indexOfFirstData, indexOfLastData);
         }
 
         const pageNumbers = [];
@@ -97,15 +100,16 @@ export class Dashboard extends React.Component {
         return (
             <div className="dashboard">
                 <div className="dashboard-half">
-                        {displayMap}
-                </div>
-                <div className="dashboard-half">
+                    <h2> Your matches </h2>
                     {renderCurrent}
                     <ul id='page-numbers'>
                         {previous}
                         {renderPageNumbers}
                         {next}
                     </ul>
+                </div>
+                <div className="dashboard-half">
+                        {displayMap}
                 </div>
             </div>
         );
