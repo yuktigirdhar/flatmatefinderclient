@@ -47,6 +47,12 @@ export class HeaderBar extends React.Component {
                 <p className="nav-item"><Link to="/dashboard">Dashboard</Link></p>
             )
         }
+        let apartmentButton;
+        if(this.props.loggedIn) {
+            apartmentButton = (
+                <p className="nav-item"><Link to="/apartment">Apartments</Link></p>
+            )
+        }
         let profileButton; 
         if(this.props.loggedIn) {
             profileButton = (
@@ -89,6 +95,7 @@ export class HeaderBar extends React.Component {
                         {logOutButton}
                         {questionsButton}
                         {dashboardButton}
+                        {apartmentButton}
                         {profileButton}
                         {hamburger}
                 </div>
@@ -96,6 +103,7 @@ export class HeaderBar extends React.Component {
                     <p className={mobileNavItemClasses.join(' ')} onClick={() => this.handleLogOut()}>Log out</p>
                     <p className={mobileNavItemClasses.join(' ')} onClick={() => this.handleMobileNav()}><Link to="/questions">Questions</Link></p>
                     <p className={mobileNavItemClasses.join(' ')} onClick={() => this.handleMobileNav()}><Link to="/dashboard">Dashboard</Link></p>
+                    <p className={mobileNavItemClasses.join(' ')} onClick={() => this.handleMobileNav()}><Link to="/apartment">Apartments</Link></p>
                     <p className={mobileNavItemClasses.join(' ')} onClick={() => this.handleMobileNav()}><Link to="/profile">Profile</Link></p>
                 </div>
             </div>

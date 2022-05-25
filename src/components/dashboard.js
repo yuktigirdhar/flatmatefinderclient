@@ -98,6 +98,7 @@ export class Dashboard extends React.Component {
         }
         
         return (
+            <div>
             <div className="dashboard">
                 <div className="dashboard-half">
                     <h2> Your matches </h2>
@@ -112,6 +113,15 @@ export class Dashboard extends React.Component {
                         {displayMap}
                 </div>
             </div>
+        <footer>
+
+            <p className="copyright color-text-a">
+                &copy; Copyright
+                <span className="color-a"> Flatmatefinder</span> All Rights Reserved.
+                 Designed by <a href="https://bootstrapmade.com/">flatmatefinderuci</a>
+            </p>
+        </footer>
+        </div>
         );
     }
 }

@@ -6,6 +6,7 @@ import LandingPage from './landing-page';
 import Start from './start';
 import LoginForm from './login-form';
 import Dashboard from './dashboard';
+import Apartment from './apartment';
 import Questions from './questions';
 import UserProfile from './user-profile';
 import RegistrationPage from './registration-page';
@@ -63,6 +64,7 @@ export class App extends React.Component {
                         <Route exact path="/login" component={LoginForm} />
                         <Route exact path="/start" component={Start} />
                         <Route exact path="/dashboard" component={Dashboard} />
+                        <Route exact path="/apartment" component={Apartment} />
                         <Route exact path="/register" component={RegistrationPage} />
                         <Route exact path="/questions" component={Questions} />
                         <Route exact path="/profile" component={UserProfile} />
