@@ -12,11 +12,6 @@ export class Match extends React.Component {
             .then(() => this.props.dispatch(setSelectedUserMatch(this.props.user.score)))
     }
 
-    removeMatch(username) {
-        console.log("hi there *******")
-
-    }
-
     render() {
         if (this.props.redirectDisplayed) {
             return <Redirect to="/search-user-profile" />;
@@ -33,7 +28,7 @@ export class Match extends React.Component {
                 </div>
                 <div>
                     <p className="match-text">{this.props.user.firstName} {this.props.user.lastName}<br /> {this.props.user.score}% Match</p>
-                    <button className="button-dark" onClick={() => this.removeMatch(this.props.user.username)}>Remove Match</button>
+                   
                 </div>
             </div>
         );
