@@ -90,7 +90,7 @@ export class HeaderBar extends React.Component {
         }
 
         return (
-            <div>
+            <div className="gradient-background">
                 <div className="header-bar">
                         {logOutButton}
                         {questionsButton}
