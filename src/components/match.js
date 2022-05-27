@@ -8,6 +8,7 @@ import '../styles/match.css';
 export class Match extends React.Component {
 
     handleMatchClick() {
+        console.log(this.props.user);
         this.props.dispatch(getSelectedUser(this.props.user.username))
             .then(() => this.props.dispatch(setSelectedUserMatch(this.props.user.score)))
     }
@@ -27,8 +28,13 @@ export class Match extends React.Component {
                     </div>
                 </div>
                 <div>
-                    <p className="match-text">{this.props.user.firstName} {this.props.user.lastName}<br /> {this.props.user.score}% Match</p>
-                   
+                    <p className="match-text">{this.props.user.firstName} {this.props.user.lastName}<br /> {this.props.user.score}% Match <br />
+                        City : {this.props.user.city}
+
+                        <button className="button-inline margin-100" type="submit">More Info </button>
+
+                    </p>
+
                 </div>
             </div>
         );
