@@ -30,9 +30,10 @@ export class Match extends React.Component {
                 <div>
                     <p className="match-text">{this.props.user.firstName} {this.props.user.lastName}<br /> {this.props.user.score}% Match <br />
                         City : {this.props.user.city}
-
-                        <button className="button-inline margin-100" type="submit">More Info </button>
-
+                        <br />
+                        <button className="button-blue" type="submit"> More Info </button>
+                        <br />
+                        <button className="button-dark">Remove Match</button>
                     </p>
 
                 </div>

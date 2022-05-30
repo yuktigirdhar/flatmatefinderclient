@@ -112,8 +112,11 @@ export default class LandingPage extends React.Component {
             </div>
                 <div className="landing-page">
                     <div className="text-section">
-                        <h1>Flatmate Finder</h1>
-                        <p>Your home away from home</p>
+
+                        <div className="bunkup-logo">
+
+                        </div>
+                        <p>Find your home away from home</p>
                         <Link to="/start"><button className="button-blue">Get Started</button></Link>
                         <div>
                         <p>Already have an account? <span className="login-link"><Link to="/login">Login</Link></span></p>
