@@ -12,7 +12,10 @@ import UserProfile from './user-profile';
 import RegistrationPage from './registration-page';
 import searchUserProfile from './search-user-profile'; 
 import {refreshAuthToken} from '../actions/auth';
-import { Transition } from 'react-transition-group'; 
+import { Transition } from 'react-transition-group';
+import listApartments from './list-apartments';
+import findApartments from './find-apartments';
+import yourListings from './your-listings';
 import '../styles/app.css'; 
 
 export class App extends React.Component {
@@ -68,6 +71,9 @@ export class App extends React.Component {
                         <Route exact path="/register" component={RegistrationPage} />
                         <Route exact path="/questions" component={Questions} />
                         <Route exact path="/profile" component={UserProfile} />
+                        <Route exact path="/list-apartments" component={listApartments} />
+                        <Route exact path="/find-apartments" component={findApartments} />
+                        <Route exact path="/your-listings" component={yourListings} />
                         <Route exact path="/search-user-profile" component={searchUserProfile} />
                     </div>
                 </div>
