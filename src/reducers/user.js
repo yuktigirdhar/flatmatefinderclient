@@ -6,6 +6,7 @@ import {
     SET_REDIRECT_DISPLAY_FALSE,
     SET_CURRENT_CHAT,
     SAVE_LAT_LONG,
+    DISPLAY_ALL_APARTMENTS
 
 } from '../actions/user';
 
@@ -17,7 +18,8 @@ const initialState = {
     redirectDisplayed: false,
     currentChat: null,
     latLong: null,
-    updatedUser: false
+    updatedUser: false,
+    apartmentsList: []
 };
 
 export default function reducer(state = initialState, action) {
@@ -51,7 +53,11 @@ export default function reducer(state = initialState, action) {
         return Object.assign({}, state, {
             latLong: action.latLong
         })
-    }
+    }else if (action.type === DISPLAY_ALL_APARTMENTS) {
+         return Object.assign({}, state, {
+             apartmentsList: action.apartments
+         })
+     }
     
     return state;
 }

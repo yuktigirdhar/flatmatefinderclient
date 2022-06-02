@@ -60,3 +60,13 @@ footer .credits {
     width: 800px;
     height: 400px;
 }
+.contact-block{
+     background-color: rgb(153 117 82);
+        padding: 15px;
+        margin-bottom: 40px;
+        border-radius: 5px;
+        display: block;
+        box-shadow: 0px 0px 10px #242424;
+        transition: 0.3s;
+        cursor: pointer;
+}

@@ -27,6 +27,31 @@ export const getAllUsers = (user) => dispatch => {
     }); 
 }
 
+
+export const DISPLAY_ALL_APARTMENTS = 'DISPLAY_ALL_APARTMENTS';
+export const displayAllApartments = apartments => ({
+    type: DISPLAY_ALL_APARTMENTS,
+    apartments
+});
+
+// THIS IS OURS. VERY GENERAL, NEEDS TO BE EDITED TO RUN ALGORITHM. RIGHT NOW JUST FETCHES ALL
+
+export const getAllApartments = () => dispatch => {
+    console.log("Apartments API call happening??")
+    return fetch(`${API_BASE_URL}/api/apartments`, {
+        method: 'GET',
+        headers: {
+            'content-type': 'application/json'
+        }
+    })
+    .then(res => res.json())
+    .then(apartments => {
+        console.log("Getting apartments list?")
+        console.log(apartments)
+        dispatch(displayAllApartments(apartments))
+    });
+}
+
 export const SET_LOOKING_FOR = 'SET_LOOKING_FOR';
 export const setLookingFor = (looking_for) => ({
     type: SET_LOOKING_FOR, 
@@ -64,6 +89,8 @@ export const updateCurrentUser = (currentUser) => ({
 
 export const saveQuestions = (user) => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
+    console.log("Save Questions");
+    console.log(user);
     return fetch(`${API_BASE_URL}/api/users`, {
         method: 'PUT',
         headers: {

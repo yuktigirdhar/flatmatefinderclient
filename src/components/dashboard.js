@@ -47,10 +47,10 @@ export class Dashboard extends React.Component {
             return <Redirect to="/login" />;
         }
 
-
         let currentMatches = this.props.profileMatches.map((match, index) => (
             <Match key={index} user={match} />
         ));
+
         const { currentPage, dataPerPage } = this.state;
         for (let i = 0; i < currentMatches.length; i++) {
                 if(currentMatches[i].props.user.username == this.props.currentUser.username)
