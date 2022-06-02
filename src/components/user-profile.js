@@ -280,6 +280,7 @@ export class UserProfile extends React.Component {
     let fullName = `${this.props.firstName} ${this.props.lastName}`;
 
     return (
+        <div>
       <div className="search-user-profile">
         <div className="left-section">
           { picture }
@@ -312,8 +313,20 @@ export class UserProfile extends React.Component {
           <div className="search-user-profile-bio">
             {bio}
           </div>
+          <br/><br/>
         </div>
       </div>
+          <br/> <br/> <br/> <br/> <br/>
+          <div className="footer-basic">
+            <footer>
+              <div className="social"><a href="#"><i className="fa fa-instagram"></i></a><a
+                  href="#"><i className="fa fa-snapchat"></i></a><a href="#"><i
+                  className="fa fa-twitter"></i></a><a href="#"><i
+                  className="fa fa-facebook"></i></a></div>
+              <p className="copyright">bunkup@uci.edu</p>
+            </footer>
+          </div>
+        </div>
     )
   }
 }

@@ -8,15 +8,20 @@ body {
 /*    background-size: cover !IMPORTANT;*/
 /*}*/
 .profile {
-    width: 60%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     color: black !IMPORTANT;
+    background-color: #cfa684;
+    padding: 20px;
+    border-radius: 20px;
 }
 
 .form-container {
     width: 100%;
     color: black !IMPORTANT;
+    background-color: #cfa684;
+    padding: 20px;
 }
 
 @media screen and (max-width: 700px) {

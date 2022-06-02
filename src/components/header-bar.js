@@ -92,6 +92,7 @@ export class HeaderBar extends React.Component {
         return (
             <div className="gradient-background">
                 <div className="header-bar">
+                    <img src="https://iili.io/XsE7Pp.md.png" alt="logo" className="image-nav-bar"/>
                         {logOutButton}
                         {questionsButton}
                         {dashboardButton}
@@ -106,6 +107,7 @@ export class HeaderBar extends React.Component {
                     <p className={mobileNavItemClasses.join(' ')} onClick={() => this.handleMobileNav()}><Link to="/apartment">Apartments</Link></p>
                     <p className={mobileNavItemClasses.join(' ')} onClick={() => this.handleMobileNav()}><Link to="/profile">Profile</Link></p>
                 </div>
+
             </div>
         );
     }

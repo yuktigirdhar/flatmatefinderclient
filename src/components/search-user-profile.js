@@ -84,6 +84,7 @@ export class SearchUserProfile extends React.Component {
     }
 
     return (
+        <div>
       <div className="search-user-profile">
         <div className="left-section">
           <div style={sectionStyle} className="profile-picture">
@@ -110,6 +111,7 @@ export class SearchUserProfile extends React.Component {
           </div>
         </div>
         <div className="right-section">
+          <br/><br/>
           { name }
           <p><strong>Location:</strong> {this.props.city}, {this.props.state}
           <br />
@@ -127,6 +129,17 @@ export class SearchUserProfile extends React.Component {
           <ChatForm displayed={this.state.displayed} onHandleClose={() => this.toggleChat()}/>
           </div>
       </div>
+          <br/> <br/> <br/> <br/> <br/> <br/>
+    <div className="footer-basic">
+      <footer>
+        <div className="social"><a href="#"><i className="fa fa-instagram"></i></a><a
+            href="#"><i className="fa fa-snapchat"></i></a><a href="#"><i
+            className="fa fa-twitter"></i></a><a href="#"><i
+            className="fa fa-facebook"></i></a></div>
+        <p className="copyright">bunkup@uci.edu</p>
+      </footer>
+    </div>
+    </div>
     )
   }
 }

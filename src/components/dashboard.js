@@ -99,7 +99,22 @@ export class Dashboard extends React.Component {
         
         return (
             <div>
+                <br/>
+                <div> {displayMap}</div>
+
+                {/*<div class="row">*/}
+                {/*    <br/><br/>*/}
+                {/*    <h2> Your matches </h2>*/}
+                {/*    {renderCurrent}*/}
+                {/*    <ul id='page-numbers'>*/}
+                {/*        {previous}*/}
+                {/*        {renderPageNumbers}*/}
+                {/*        {next}*/}
+                {/*    </ul>*/}
+                {/*</div>*/}
+
             <div className="dashboard">
+
                 <div className="dashboard-half">
                     <h2> Your matches </h2>
                     {renderCurrent}
@@ -110,17 +125,21 @@ export class Dashboard extends React.Component {
                     </ul>
                 </div>
                 <div className="dashboard-half">
-                        {displayMap}
+                    <br/>
+                    <br/><br/><br/><br/>
+                    <br/><br/>
+                    <img src="https://iili.io/Xskte4.md.jpg" alt="bunk image" className="image-dashboard"/>
                 </div>
             </div>
-        <footer>
-
-            <p className="copyright color-text-a">
-                &copy; Copyright
-                <span className="color-a"> Flatmatefinder</span> All Rights Reserved.
-                 Designed by <a href="https://bootstrapmade.com/">flatmatefinderuci</a>
-            </p>
-        </footer>
+                <div className="footer-basic">
+                    <footer>
+                        <div className="social"><a href="#"><i className="fa fa-instagram"></i></a><a
+                            href="#"><i className="fa fa-snapchat"></i></a><a href="#"><i
+                            className="fa fa-twitter"></i></a><a href="#"><i
+                            className="fa fa-facebook"></i></a></div>
+                        <p className="copyright">bunkup@uci.edu</p>
+                    </footer>
+                </div>
         </div>
         );
     }
