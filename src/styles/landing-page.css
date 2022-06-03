@@ -46,10 +46,10 @@
 }
 
 .text-section {
-    width: 70%;
+    width: 94%;
     background:#ab886c;
     height: calc(100% - 50px);
-    float: right; 
+    float: left;
     padding-left: 50px;
     padding-right: 50px;  
     padding-top: 50px;
