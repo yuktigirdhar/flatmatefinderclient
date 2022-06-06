@@ -31,7 +31,6 @@ export class ImageUpload extends React.Component {
         console.log(upload)
 
         upload.end((err, response) => {
-        console.log("YUKTI GIRDHAR");
         console.log(err)
         console.log(response)
           if (err) {
@@ -44,8 +43,12 @@ export class ImageUpload extends React.Component {
             });
 
             let user = {}
-            user.username = this.props.username; 
-            user.picture = response.body.secure_url
+            if(this.props.name === 'apartment_picture')
+                user.apartmentpicture = response.body.secure_url;
+            else
+                user.picture = response.body.secure_url;
+
+            user.username = this.props.username;
             this.props.dispatch(saveQuestions(user))
             this.props.onUploadSuccess(); 
           }
