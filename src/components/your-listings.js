@@ -36,12 +36,17 @@ export class yourListings extends React.Component {
 
         let userData = this.props.currentUser
         let image = images_list[0]
+        let picture;
+        let sectionStyle = {
+            backgroundImage: `url(${this.props.apartmentpicture})`,
+        };
+        picture = <div className="profile-picture" style={sectionStyle}>
+        </div>;
         return (
                 <div>
                   <div className="search-user-profile">
                     <div className="left-section">
-                        <img src={image} className="img-responsive img-thumbnail"
-                                                 alt="Responsive image"/>
+                       {picture}
                     </div>
                     <div className="right-section">
                        <div>
@@ -73,7 +78,9 @@ const mapStateToProps = state => {
         protectedData: state.protectedData.data,
         profileMatches: state.user.profileMatches,
         currentUser: state.auth.currentUser,
-        apartments: state.user.apartmentsList
+        apartments: state.user.apartmentsList,
+        apartmentpicture: state.auth.currentUser ? state.auth.currentUser.apartmentpicture : ''
+
     };
 };
 
