@@ -21,6 +21,12 @@ export class yourListings extends React.Component {
         if (!this.props.loggedIn) {
             return <Redirect to="/login" />;
         }
+        // if (this.props.updatedUser) {
+        //     return <Redirect to="/dashboard"/>;
+        // }
+        // if (this.props.loggedIn) {
+        //     return <Redirect to="/dashboard" />;
+        // }
         console.log("Find apartments page");
         console.log(this.props);
 

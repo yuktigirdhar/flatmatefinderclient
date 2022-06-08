@@ -21,7 +21,7 @@ export class ApartmentBlock extends React.Component {
         return (
             <div>
                 <div className="member">
-                    <img src={this.props.image} className="img-responsive img-thumbnail"
+                    <img src={this.props.apartmentuser.apartmentpicture} className="img-find-apartments"
                          alt="Responsive image"/>
                     <div>
                         <br/>
@@ -34,7 +34,7 @@ export class ApartmentBlock extends React.Component {
                         <b> Price : $</b> {this.props.apartmentuser.max_price}
                         <br/><br/>
                         <div onClick={() => this.handleMatchClick()} className="contact-block">
-                        <b> Contact : </b> {this.props.apartmentuser.firstName} {this.props.apartmentuser.lastName} <br/ ><br/>{this.props.apartmentuser.email}
+                        <b> Contact : </b> {this.props.apartmentuser.firstName} {this.props.apartmentuser.lastName} <br/><br/>{this.props.apartmentuser.email}
                         </div>
                     </div>
                 </div>

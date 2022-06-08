@@ -186,11 +186,9 @@ componentDidMount() {
           <h1 className="center">Questionnaire</h1>
           <p className="center" > Fill the details of your apartment below.</p>
           <br />
-          { picture }
+          {/*{ picture }*/}
           {lookingFor}
-
-
-
+            
           <h2>What are your ideal conditions for your potential housemate ? </h2>
 
           <div className="form-section">
@@ -446,9 +444,8 @@ componentDidMount() {
                             <Field name="gender" component="input" type="radio" value="female" />
                         </div>
                       </div>
-
-
-
+                <center><p> Add/Change image :</p>
+              { picture }</center>
           </div>
           <button
             type="submit"

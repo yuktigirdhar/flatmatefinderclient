@@ -32,6 +32,7 @@ export class findApartments extends React.Component {
                     "https://media.gettyimages.com/photos/row-of-suburban-townhouses-on-summer-day-picture-id108220043?k=20&m=108220043&s=612x612&w=0&h=9UI-_S7KvBeQiyjHqoi3mhQVsl4SuKpvmhv1dzOEBAk="
          ]
         console.log(images_list[0]);
+        console.log(this.props.apartments);
         let currentApartments = this.props.apartments.map((apartment, index) => (
             <ApartmentBlock key={index} apartmentuser={apartment} image={images_list[index]} />
         ));
@@ -45,10 +46,11 @@ export class findApartments extends React.Component {
                             <div className="container">
                                 <div className="row">
                                     <div className="col-12 col-lg-6">
-                                        <h3>Find Your Home Sweet Home With Us</h3>
+                                            <h3> Find Your Home Sweet Home With Us </h3>
                                         <p>
                                             Renting a new apartment should be simple and painless. Apartment Finder has the most up-to-date availability and pricing data in the industry to help you find the best deals, the best rent specials, and the true cost of your next apartment.
                                         </p>
+
                                     </div>
                                     {/*<p> To find your dream apartment, click <a onClick = {() => window.open("xyz.html")}>here</a></p>*/}
                                 </div>
