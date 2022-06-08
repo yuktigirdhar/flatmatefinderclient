@@ -107,41 +107,61 @@ export default class LandingPage extends React.Component {
         return (
             <div>
                 <div>
-                    <nav className="navbar navbar-expand-lg">
-                        <div className="container">
-                            <a className="navbar-brand text-white" href="#"><i
-                                className="fa fa-home fa-lg mr-2"></i>BUNK UP</a>
-                            <button className="navbar-toggler" type="button" data-toggle="collapse"
-                                    data-target="#nvbCollapse" aria-controls="nvbCollapse">
-                                <span className="navbar-toggler-icon"></span>
-                            </button>
-                            <div className="collapse navbar-collapse" id="nvbCollapse">
-                                <ul className="navbar-nav ml-auto">
-                                    <li className="nav-item pl-1">
-                                        <a className="nav-link" href="#"><i className="fa fa-user fa-fw mr-1"></i>Your personal real estate assistant</a>
-                                    </li>
+                    <div className="cater3-movingBG">
+                        <div className="flyinTxtCont">
+                            <div className="flyIn lineOne">Bunk Up</div>
+                            {/*<div className="flyIn lineTwo">Find your perfect apartment and roommates</div>*/}
+                            {/*<div className="flyIn lineThree">Your personal real estate assistant</div>*/}
+                            <div className="flyIn lineFour">Find your perfect apartment and roommates</div>
+                            <div className="flyIn lineFive">
+                                <Link to="/start"><button className="button-blue">Get Started</button></Link>
 
-                                </ul>
+                                <div>
+                                    <p>Already have an account? <span className="login-link"><Link to="/login">Login</Link></span></p>
+                                </div>
                             </div>
+
+
                         </div>
-                    </nav>
+                    </div>
+                <br/>
+                    {/*<nav className="navbar navbar-expand-lg">*/}
+
+                    {/*    <div className="container">*/}
+                    {/*        <a className="navbar-brand text-white" href="#"><i*/}
+                    {/*            className="fa fa-home fa-lg mr-2"></i>BUNK UP</a>*/}
+                    {/*        <button className="navbar-toggler" type="button" data-toggle="collapse"*/}
+                    {/*                data-target="#nvbCollapse" aria-controls="nvbCollapse">*/}
+                    {/*            <span className="navbar-toggler-icon"></span>*/}
+                    {/*        </button>*/}
+
+                    {/*        <div className="collapse navbar-collapse" id="nvbCollapse">*/}
+                    {/*            <ul className="navbar-nav ml-auto">*/}
+                    {/*                <li className="nav-item pl-1">*/}
+                    {/*                    <a className="nav-link" href="#"><i className="fa fa-user fa-fw mr-1"></i>Your personal real estate assistant</a>*/}
+                    {/*                </li>*/}
+
+                    {/*            </ul>*/}
+                    {/*        </div>*/}
+                    {/*    </div>*/}
+                    {/*</nav>*/}
 
                 </div>
                 {/*<nav className="navbar navbar-expand-lg navbar-light fixed-top">*/}
                 {/*</nav>*/}
-                <div className="landing-page">
-                    <div className="text-section">
+                {/*<div className="landing-page">*/}
+                {/*    <div className="text-section">*/}
 
-                        <div className="bunkup-logo">
+                {/*        <div className="bunkup-logo">*/}
 
-                        </div>
-                        <p>Find your home away from home</p>
-                        <Link to="/start"><button className="button-blue">Get Started</button></Link>
-                        <div>
-                            <p>Already have an account? <span className="login-link"><Link to="/login">Login</Link></span></p>
-                        </div>
-                    </div>
-                </div>
+                {/*        </div>*/}
+                {/*        <p>Find your home away from home</p>*/}
+                {/*        <Link to="/start"><button className="button-blue">Get Started</button></Link>*/}
+                {/*        <div>*/}
+                {/*            <p>Already have an account? <span className="login-link"><Link to="/login">Login</Link></span></p>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
                 <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
                     <ol className="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
