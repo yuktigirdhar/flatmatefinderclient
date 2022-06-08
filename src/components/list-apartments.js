@@ -31,12 +31,12 @@ componentDidMount() {
     const { firstName, lastName, age, gender, gender_bothered, city, state, max_distance,
       max_price, pets_have, pets_bothered, loud_music, loud_music_bothered, cigarettes, cigarettes_bothered,
       drinking_day_per_week, drinking_bothered, alt_smoking, alt_smoking_bothered, hour_awake, hours_bothered,
-      guests_frequency, guests_bothered, cleanliness, cleanliness_bothered, address, zipcode, common_areas, common_areas_bothered } = values;
+      guests_frequency, guests_bothered, cleanliness, cleanliness_bothered, address, zipcode, common_areas, common_areas_bothered, numberofrooms, amenities  } = values;
     const user = {
       firstName, lastName, age, gender, gender_bothered, city, state, max_distance,
       max_price, pets_have, pets_bothered, loud_music, loud_music_bothered, cigarettes, cigarettes_bothered,
       drinking_day_per_week, drinking_bothered, alt_smoking, alt_smoking_bothered, hour_awake, hours_bothered,
-      guests_frequency, guests_bothered, cleanliness, cleanliness_bothered, address, zipcode, common_areas, common_areas_bothered
+      guests_frequency, guests_bothered, cleanliness, cleanliness_bothered, address, zipcode, common_areas, common_areas_bothered, numberofrooms, amenities
     };
     user.username = this.props.currentUser.username
     if (this.props.currentUser.looking_for === "find_a_room" || this.props.currentUser.looking_for === "find_a_roommate") {
@@ -159,6 +159,24 @@ componentDidMount() {
             validate={[required, nonEmpty]}
           />
         </div>
+          <div className="form-section">
+              <label htmlFor="numberofrooms">Number of rooms</label>
+              <Field
+                  component={Input}
+                  type="number"
+                  name="numberofrooms"
+                  validate={[required, nonEmpty]}
+              />
+          </div>
+          <div className="form-section">
+              <label htmlFor="amenities">Amenities</label>
+              <Field
+                  component={Input}
+                  type="text"
+                  name="amenities"
+                  validate={[required, nonEmpty]}
+              />
+          </div>
       </div>
 
     let picture, nextField;
@@ -170,7 +188,7 @@ componentDidMount() {
             let sectionStyle = {
                 backgroundImage: `url(${this.props.apartmentpicture})`,
             };
-            picture = <div className="profile-picture" style={sectionStyle}>
+            picture = <div className="list-apartment-picture" style={sectionStyle}>
               <i className="fa fa-pencil-square-o edit-picture" aria-hidden="true" onClick={() => this.handlePictureInputToggle()}></i>
             </div>;
             }
@@ -188,264 +206,264 @@ componentDidMount() {
           <br />
           {/*{ picture }*/}
           {lookingFor}
-            
-          <h2>What are your ideal conditions for your potential housemate ? </h2>
+
+          {/*<h2>What are your ideal conditions for your potential housemate ? </h2>*/}
 
           <div className="form-section">
-            <label>Can your potential rentee have any pets?</label>
-          </div>
-          <div className="form-section">
-            <label>Yes</label>
-            <Field name="pets_have" component="input" type="radio" value="true" />
-          </div>
-          <div className="form-section">
-            <label>No</label>
-            <Field name="pets_have" component="input" type="radio" value="false" />
-          </div>
-          <div className="form-section">
-            <label htmlFor="pets_bothered">Select your preference (1-5 where 5 being most imp) to find someone who doesn't have pets?</label>
-          </div>
-          <div className="form-section">
-          <Field
-              component={Rating}
-              type="text"
-              name="pets_bothered"
-              validate={[required]}
-            />
-          </div>
-          <div className="form-section">
-            <label>Can your potential rentee listen to loud music, tv, or movies at home?</label>
-          </div>
-          <div className="form-section">
-              <label>Yes</label>
-              <Field name="loud_music" component="input" type="radio" value="true" />
-          </div>
-          <div className="form-section">
-            <label>No</label>
-            <Field name="loud_music" component="input" type="radio" value="false" />
-          </div>
-          <div className="form-section">
-            <label htmlFor="loud_music_bothered">On a scale from 1-5, where 1 is not important and 5 is very important, how important is it to find someone who is quiet?</label>
-          </div>
-          <div className="form-section">
-            <Field
-              component={Rating}
-              type="text"
-              name="loud_music_bothered"
-              validate={[required]}
-            />
-          </div>
-          <div className="form-section">
-            <label>Can your potential rentee smoke cigarettes?</label>
-          </div>
-          <div className="form-section">
-            <label>Yes</label>
-            <Field name="cigarettes" component="input" type="radio" value="true" />
-          </div>
-          <div className="form-section">
-            <label>No</label>
-            <Field name="cigarettes" component="input" type="radio" value="false" />
-          </div>
-          <div className="form-section">
-            <label htmlFor="cigarettes_bothered">On a scale from 1-5, where 1 is not important and 5 is very important, how important is it to find someone who doesn't smokes cigarettes?</label>
-          </div>
-          <div className="form-section">
-            <Field
-              component={Rating}
-              type="text"
-              name="cigarettes_bothered"
-              validate={[required]}
-            />
-          </div>
-          <div className="form-section">
-            <label>Can your potential rentee consume alcohol?</label>
-          </div>
-          <div className="form-section">
-              <label> Yes</label>
-                <Field name="drinking_day_per_week" component="input" type="radio" value="true" />
-          </div>
-          <div className="form-section">
-              <label>No</label>
-              <Field name="drinking_day_per_week" component="input" type="radio" value="false" />
-          </div>
-          <div className="form-section">
-            <label htmlFor="drinking_bothered">On a scale from 1-5, where 1 is not important and 5 is very important, how important is it to find someone who doesn't drink alcohol?</label>
-          </div>
-          <div className="form-section">
-            <Field
-              component={Rating}
-              type="text"
-              name="drinking_bothered"
-              validate={[required]}
-            />
-          </div>
-          <div className="form-section">
-            <label>Can your potential rentee smoke marijuana?</label>
-          </div>
-          <div className="form-section">
-              <label>Yes</label>
-              <Field name="alt_smoking" component="input" type="radio" value="true" />
-          </div>
-          <div className="form-section">
-            <label>No</label>
-            <Field name="alt_smoking" component="input" type="radio" value="false" />
-          </div>
-          <div className="form-section">
-            <label htmlFor="alt_smoking_bothered">On a scale from 1-5, where 1 is not important and 5 is very important, how important is it to find someone who doesn't smokes marijuana?</label>
-          </div>
-          <div className="form-section">
-            <Field
-              component={Rating}
-              type="text"
-              name="alt_smoking_bothered"
-              validate={[required]}
-            />
-          </div>
-          <div className="form-section">
-            <label>Is it okay if your potential rentee be awake at odd hours of the morning/evening?</label>
-          </div>
-          <div className="form-section">
-            <label>Yes</label>
-            <Field name="hour_awake" component="input" type="radio" value="true" />
-          </div>
-          <div className="form-section">
-            <label>No</label>
-            <Field name="hour_awake" component="input" type="radio" value="false" />
-          </div>
-          <div className="form-section">
-            <label htmlFor="hours_bothered">On a scale from 1-5, where 1 is not important and 5 is very important, how important is it to find someone who is on a 9-5 schedule?</label>
-          </div>
-          <div className="form-section">
-            <Field
-              component={Rating}
-              type="text"
-              name="hours_bothered"
-              validate={[required]}
-            />
-          </div>
+          {/*  <label>Can your potential rentee have any pets?</label>*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <label>Yes</label>*/}
+          {/*  <Field name="pets_have" component="input" type="radio" value="true" />*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <label>No</label>*/}
+          {/*  <Field name="pets_have" component="input" type="radio" value="false" />*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <label htmlFor="pets_bothered">Select your preference (1-5 where 5 being most imp) to find someone who doesn't have pets?</label>*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*<Field*/}
+          {/*    component={Rating}*/}
+          {/*    type="text"*/}
+          {/*    name="pets_bothered"*/}
+          {/*    validate={[required]}*/}
+          {/*  />*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <label>Can your potential rentee listen to loud music, tv, or movies at home?</label>*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*    <label>Yes</label>*/}
+          {/*    <Field name="loud_music" component="input" type="radio" value="true" />*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <label>No</label>*/}
+          {/*  <Field name="loud_music" component="input" type="radio" value="false" />*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <label htmlFor="loud_music_bothered">On a scale from 1-5, where 1 is not important and 5 is very important, how important is it to find someone who is quiet?</label>*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <Field*/}
+          {/*    component={Rating}*/}
+          {/*    type="text"*/}
+          {/*    name="loud_music_bothered"*/}
+          {/*    validate={[required]}*/}
+          {/*  />*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <label>Can your potential rentee smoke cigarettes?</label>*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <label>Yes</label>*/}
+          {/*  <Field name="cigarettes" component="input" type="radio" value="true" />*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <label>No</label>*/}
+          {/*  <Field name="cigarettes" component="input" type="radio" value="false" />*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <label htmlFor="cigarettes_bothered">On a scale from 1-5, where 1 is not important and 5 is very important, how important is it to find someone who doesn't smokes cigarettes?</label>*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <Field*/}
+          {/*    component={Rating}*/}
+          {/*    type="text"*/}
+          {/*    name="cigarettes_bothered"*/}
+          {/*    validate={[required]}*/}
+          {/*  />*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <label>Can your potential rentee consume alcohol?</label>*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*    <label> Yes</label>*/}
+          {/*      <Field name="drinking_day_per_week" component="input" type="radio" value="true" />*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*    <label>No</label>*/}
+          {/*    <Field name="drinking_day_per_week" component="input" type="radio" value="false" />*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <label htmlFor="drinking_bothered">On a scale from 1-5, where 1 is not important and 5 is very important, how important is it to find someone who doesn't drink alcohol?</label>*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <Field*/}
+          {/*    component={Rating}*/}
+          {/*    type="text"*/}
+          {/*    name="drinking_bothered"*/}
+          {/*    validate={[required]}*/}
+          {/*  />*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <label>Can your potential rentee smoke marijuana?</label>*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*    <label>Yes</label>*/}
+          {/*    <Field name="alt_smoking" component="input" type="radio" value="true" />*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <label>No</label>*/}
+          {/*  <Field name="alt_smoking" component="input" type="radio" value="false" />*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <label htmlFor="alt_smoking_bothered">On a scale from 1-5, where 1 is not important and 5 is very important, how important is it to find someone who doesn't smokes marijuana?</label>*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <Field*/}
+          {/*    component={Rating}*/}
+          {/*    type="text"*/}
+          {/*    name="alt_smoking_bothered"*/}
+          {/*    validate={[required]}*/}
+          {/*  />*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <label>Is it okay if your potential rentee be awake at odd hours of the morning/evening?</label>*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <label>Yes</label>*/}
+          {/*  <Field name="hour_awake" component="input" type="radio" value="true" />*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <label>No</label>*/}
+          {/*  <Field name="hour_awake" component="input" type="radio" value="false" />*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <label htmlFor="hours_bothered">On a scale from 1-5, where 1 is not important and 5 is very important, how important is it to find someone who is on a 9-5 schedule?</label>*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <Field*/}
+          {/*    component={Rating}*/}
+          {/*    type="text"*/}
+          {/*    name="hours_bothered"*/}
+          {/*    validate={[required]}*/}
+          {/*  />*/}
+          {/*</div>*/}
 
-          <div className="form-section">
-            <label>Can your potential rentee have guests over frequently ?</label>
-          </div>
-          <div className="form-section">
-            <label>Yes</label>
-            <Field name="guests_frequency" component="input" type="radio" value="true" />
-          </div>
-          <div className="form-section">
-            <label>No</label>
-            <Field name="guests_frequency" component="input" type="radio" value="false" />
-          </div>
-          <div className="form-section">
-            <label htmlFor="guests_bothered">On a scale from 1-5, where 1 is not important and 5 is very important, how important is it to find someone who doesn't have guests over?</label>
-          </div>
-          <div className="form-section">
-            <Field
-              component={Rating}
-              type="text"
-              name="guests_bothered"
-              validate={[required]}
-            />
-          </div>
-          <div className="form-section">
-            <label>Is it alright if your potential rentee is not very clean and organized?</label>
-          </div>
-          <div className="form-section">
-            <label>Yes</label>
-            <Field name="cleanliness" component="input" type="radio" value="true" />
-          </div>
-          <div className="form-section">
-            <label>No</label>
-            <Field name="cleanliness" component="input" type="radio" value="false" />
-          </div>
-          <div className="form-section">
-            <label htmlFor="cleanliness_bothered">On a scale from 1-5, where 1 is not important and 5 is very important, how important is it to find someone who is clean?</label>
-          </div>
-          <div className="form-section">
-            <Field
-              component={Rating}
-              type="text"
-              name="cleanliness_bothered"
-              validate={[required]}
-            />
-          </div>
-          <div className="form-section">
-            <label>Does the potential rentee have 24/7 access to common areas, facilities and ammenities?</label>
-          </div>
-          <div className="form-section">
-              <label>Yes</label>
-              <Field name="common_areas" component="input" type="radio" value="true" />
-          </div>
-          <div className="form-section">
-              <label>No</label>
-              <Field name="common_areas" component="input" type="radio" value="false" />
-          </div>
-          <div className="form-section">
-            <label htmlFor="common_areas_bothered">On a scale from 1-5, where 1 is not important and 5 is very important, how important is it to find someone who keeps to themself?</label>
-          </div>
-          <div className="form-section">
-            <Field
-              component={Rating}
-              type="text"
-              name="common_areas_bothered"
-              validate={[required]}
-            />
-          </div>
-          <div className="form-section">
-            <label htmlFor="gender_bothered">On a scale from 1-5, where 1 is not important and 5 is very important, how important is it to find someone of the preferred sex mentioned by you?</label>
-          </div>
-          <div className="form-section">
-            <Field
-              component={Rating}
-              type="text"
-              name="gender_bothered"
-              validate={[required]}
-            />
+          {/*<div className="form-section">*/}
+          {/*  <label>Can your potential rentee have guests over frequently ?</label>*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <label>Yes</label>*/}
+          {/*  <Field name="guests_frequency" component="input" type="radio" value="true" />*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <label>No</label>*/}
+          {/*  <Field name="guests_frequency" component="input" type="radio" value="false" />*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <label htmlFor="guests_bothered">On a scale from 1-5, where 1 is not important and 5 is very important, how important is it to find someone who doesn't have guests over?</label>*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <Field*/}
+          {/*    component={Rating}*/}
+          {/*    type="text"*/}
+          {/*    name="guests_bothered"*/}
+          {/*    validate={[required]}*/}
+          {/*  />*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <label>Is it alright if your potential rentee is not very clean and organized?</label>*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <label>Yes</label>*/}
+          {/*  <Field name="cleanliness" component="input" type="radio" value="true" />*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <label>No</label>*/}
+          {/*  <Field name="cleanliness" component="input" type="radio" value="false" />*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <label htmlFor="cleanliness_bothered">On a scale from 1-5, where 1 is not important and 5 is very important, how important is it to find someone who is clean?</label>*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <Field*/}
+          {/*    component={Rating}*/}
+          {/*    type="text"*/}
+          {/*    name="cleanliness_bothered"*/}
+          {/*    validate={[required]}*/}
+          {/*  />*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <label>Does the potential rentee have 24/7 access to common areas, facilities and ammenities?</label>*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*    <label>Yes</label>*/}
+          {/*    <Field name="common_areas" component="input" type="radio" value="true" />*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*    <label>No</label>*/}
+          {/*    <Field name="common_areas" component="input" type="radio" value="false" />*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <label htmlFor="common_areas_bothered">On a scale from 1-5, where 1 is not important and 5 is very important, how important is it to find someone who keeps to themself?</label>*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <Field*/}
+          {/*    component={Rating}*/}
+          {/*    type="text"*/}
+          {/*    name="common_areas_bothered"*/}
+          {/*    validate={[required]}*/}
+          {/*  />*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <label htmlFor="gender_bothered">On a scale from 1-5, where 1 is not important and 5 is very important, how important is it to find someone of the preferred sex mentioned by you?</label>*/}
+          {/*</div>*/}
+          {/*<div className="form-section">*/}
+          {/*  <Field*/}
+          {/*    component={Rating}*/}
+          {/*    type="text"*/}
+          {/*    name="gender_bothered"*/}
+          {/*    validate={[required]}*/}
+          {/*  />*/}
 
-            <div className="form-container">
-                <h2>Personal Information of the Lister</h2>
-                <p> Renters would like to know who their owners are. Fill in some basic details to help them get to know you better.</p>
-                <div className="form-section">
-                  <label htmlFor="firstName">First Name</label>
-                  <Field
-                    component={Input}
-                    type="text"
-                    name="firstName"
-                    id="firstName"
-                    validate={[required, nonEmpty, isTrimmed]}
-                  />
-                </div>
-                <div className="form-section">
-                          <label htmlFor="lastName">Last Name</label>
-                          <Field
-                            component={Input}
-                            type="text"
-                            name="lastName"
-                            validate={[required, nonEmpty, isTrimmed]}
-                          />
-                        </div>
-                        <div className="form-section">
-                          <label htmlFor="age">Age</label>
-                          <Field
-                            component={Input}
-                            type="number"
-                            name="age"
-                            validate={[required, nonEmpty, minValue18]}
-                          />
-                        </div>
-                        <div className="form-section">
-                          <label>Sex</label>
-                        </div>
-                        <div className="form-section">
-                            <label> Male</label>
-                            <Field name="gender" component="input" type="radio" value="male" id="gender_male" label="male" />
-                        </div>
-                        <div className="form-section">
-                            <label>Female</label>
-                            <Field name="gender" component="input" type="radio" value="female" />
-                        </div>
-                      </div>
-                <center><p> Add/Change image :</p>
-              { picture }</center>
+          {/*  <div className="form-container">*/}
+          {/*      <h2>Personal Information of the Lister</h2>*/}
+          {/*      <p> Renters would like to know who their owners are. Fill in some basic details to help them get to know you better.</p>*/}
+          {/*      <div className="form-section">*/}
+          {/*        <label htmlFor="firstName">First Name</label>*/}
+          {/*        <Field*/}
+          {/*          component={Input}*/}
+          {/*          type="text"*/}
+          {/*          name="firstName"*/}
+          {/*          id="firstName"*/}
+          {/*          validate={[required, nonEmpty, isTrimmed]}*/}
+          {/*        />*/}
+          {/*      </div>*/}
+          {/*      <div className="form-section">*/}
+          {/*                <label htmlFor="lastName">Last Name</label>*/}
+          {/*                <Field*/}
+          {/*                  component={Input}*/}
+          {/*                  type="text"*/}
+          {/*                  name="lastName"*/}
+          {/*                  validate={[required, nonEmpty, isTrimmed]}*/}
+          {/*                />*/}
+          {/*              </div>*/}
+          {/*              <div className="form-section">*/}
+          {/*                <label htmlFor="age">Age</label>*/}
+          {/*                <Field*/}
+          {/*                  component={Input}*/}
+          {/*                  type="number"*/}
+          {/*                  name="age"*/}
+          {/*                  validate={[required, nonEmpty, minValue18]}*/}
+          {/*                />*/}
+          {/*              </div>*/}
+          {/*              <div className="form-section">*/}
+          {/*                <label>Sex</label>*/}
+          {/*              </div>*/}
+          {/*              <div className="form-section">*/}
+          {/*                  <label> Male</label>*/}
+          {/*                  <Field name="gender" component="input" type="radio" value="male" id="gender_male" label="male" />*/}
+          {/*              </div>*/}
+          {/*              <div className="form-section">*/}
+          {/*                  <label>Female</label>*/}
+          {/*                  <Field name="gender" component="input" type="radio" value="female" />*/}
+          {/*              </div>*/}
+          {/*            </div>*/}
+              <label> &ensp; &ensp; &nbsp;Add/Update Apartment Image</label>
+              { picture }
           </div>
           <button
             type="submit"

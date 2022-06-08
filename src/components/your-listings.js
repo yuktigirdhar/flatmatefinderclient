@@ -62,7 +62,11 @@ export class yourListings extends React.Component {
                                {userData.address}
                                <br/>
                                {userData.state} {userData.zipcode}
-                               <br/><br/>
+
+                           <br/><b> Number of rooms : </b>
+                           {userData.numberofrooms}
+                           <br/><b> Amenities : </b>
+                           {userData.amenities}
                             <b> Price : $</b> {userData.max_price}
                             <br/><br/>
                        </div>
@@ -77,6 +81,8 @@ export class yourListings extends React.Component {
 
 const mapStateToProps = state => {
     const { currentUser } = state.auth;
+    console.log(state.auth.currentUser.numberofrooms);
+    console.log(state.auth.currentUser.amenities);
     return {
         loggedIn: state.auth.currentUser !== null,
         username: state.auth.currentUser ? state.auth.currentUser.username : null,
@@ -85,7 +91,9 @@ const mapStateToProps = state => {
         profileMatches: state.user.profileMatches,
         currentUser: state.auth.currentUser,
         apartments: state.user.apartmentsList,
-        apartmentpicture: state.auth.currentUser ? state.auth.currentUser.apartmentpicture : ''
+        apartmentpicture: state.auth.currentUser ? state.auth.currentUser.apartmentpicture : null,
+        numberofrooms: state.auth.currentUser ? state.auth.currentUser.numberofrooms : null,
+        amenities: state.auth.currentUser ? state.auth.currentUser.amenities : null
 
     };
 };

@@ -30,7 +30,11 @@ export class ApartmentBlock extends React.Component {
                             {this.props.apartmentuser.address}
                             <br/>
                             {this.props.apartmentuser.state} {this.props.apartmentuser.zipcode}
-                            <br/><br/>
+                            <br/><b> Number of rooms : </b>
+                            {this.props.apartmentuser.numberofrooms}
+                            <br/><b> Amenities : </b>
+                            {this.props.apartmentuser.amenities}
+                            <br/>
                         <b> Price : $</b> {this.props.apartmentuser.max_price}
                         <br/><br/>
                         <div onClick={() => this.handleMatchClick()} className="contact-block">
