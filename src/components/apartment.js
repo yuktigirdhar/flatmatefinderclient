@@ -13,7 +13,7 @@ export function Apartment(props) {
         // );
 
         return (
-        <div>Let us help you manage your property !
+        <div>
         <div className="wrapper">
 
             <div className="item">

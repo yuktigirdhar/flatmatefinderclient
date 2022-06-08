@@ -57,7 +57,7 @@ export class yourListings extends React.Component {
                     <div className="right-section">
                        <div>
                             <br/>
-                            <b> Address </b>
+                            <b> Address : </b>
                                <br/>
                                {userData.address}
                                <br/>
@@ -66,12 +66,22 @@ export class yourListings extends React.Component {
                            <br/><b> Number of rooms : </b>
                            {userData.numberofrooms}
                            <br/><b> Amenities : </b>
-                           {userData.amenities}
+                           {userData.amenities}<br />
                             <b> Price : $</b> {userData.max_price}
                             <br/><br/>
                        </div>
                     </div>
                   </div>
+                    <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
+                    <div className="footer-basic">
+                        <footer>
+                            <div className="social"><a href="#"><i className="fa fa-instagram"></i></a><a
+                                href="#"><i className="fa fa-snapchat"></i></a><a href="#"><i
+                                className="fa fa-twitter"></i></a><a href="#"><i
+                                className="fa fa-facebook"></i></a></div>
+                            <p className="copyright">bunkup@uci.edu</p>
+                        </footer>
+                    </div>
                 </div>
         );
     }

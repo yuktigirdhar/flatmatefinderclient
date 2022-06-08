@@ -5,7 +5,7 @@
     margin-right: auto;
     background-color: rgb(66, 66, 66); 
     /*background: url('../images/Houses.jpeg') no-repeat center top;*/
-    background-color: #4d3300;
+    background-color: #734d26;
     -webkit-background-size: cover; 
     -moz-background-size: cover; 
     -o-background-size: cover; 
@@ -46,12 +46,12 @@
 }
 
 .text-section {
-    width: 94%;
+    width: 74%;
     background:#ab886c;
     height: calc(100% - 50px);
     float: left;
-    padding-left: 50px;
-    padding-right: 50px;  
+    padding-left: 100px;
+    padding-right: 0px;
     padding-top: 50px;
     color: white;
     margin: 30px;

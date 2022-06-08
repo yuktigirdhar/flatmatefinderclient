@@ -25,7 +25,7 @@ export class ApartmentBlock extends React.Component {
                          alt="Responsive image"/>
                     <div>
                         <br/>
-                        <b> Address </b>
+                        <b> Address : </b>
                             <br/>
                             {this.props.apartmentuser.address}
                             <br/>

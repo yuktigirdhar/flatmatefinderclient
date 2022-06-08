@@ -471,7 +471,9 @@ componentDidMount() {
             disabled={this.props.pristine || this.props.submitting}>
             Submit
           </button>
+
         </form>
+          <br/><br/><br/>
       </div>
     );
   }

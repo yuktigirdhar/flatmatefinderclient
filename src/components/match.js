@@ -33,7 +33,7 @@ export class Match extends React.Component {
                     </p>
                     <div class="align-right-dashboard">
                     <button className="button-blue" type="submit"> More Info </button>
-                    <button className="button-dark">Remove Match</button>
+                    {/*<button className="button-dark">Remove Match</button>*/}
                     </div>
 
                 </div>
