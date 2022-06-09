@@ -18,6 +18,7 @@ export class Dashboard extends React.Component {
         };
         this.handleClick = this.handleClick.bind(this);
     }
+
     handleClick(event) {
         this.setState({
             currentPage: Number(event.target.id)
@@ -99,6 +100,18 @@ export class Dashboard extends React.Component {
         
         return (
             <div>
+                <video autoPlay muted loop id="myVideo">
+                    <source src="https://www.youtube.com/watch?v=mXnJqYwebF8" type="video/mp4"/>
+                        Your browser does not support HTML5 video.
+                </video>
+
+                {/*<div className="content">*/}
+                {/*    <h1>Heading</h1>*/}
+                {/*    <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu*/}
+                {/*        recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos*/}
+                {/*        ei. Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro.</p>*/}
+                {/*    /!*<button id="myBtn" onClick="myFunction()">Pause</button>*!/*/}
+                {/*</div>*/}
                 <br/>
                 <div> {displayMap}</div>
 
@@ -131,6 +144,15 @@ export class Dashboard extends React.Component {
                     <img src="https://iili.io/Xskte4.md.jpg" alt="bunk image" className="image-dashboard"/>
                 </div>
             </div>
+                <div className="videoContent">
+                <video id="background-video" autoPlay loop muted poster="https://i.postimg.cc/Cxv074xk/home.jpg">
+                    <source src="https://rr4---sn-a5mekn6s.googlevideo.com/videoplayback?expire=1654776091&ei=u4yhYoqDHpOa2_gPhv6TwAw&ip=209.107.196.27&id=o-AFc105mFhoajK7VRp_GBFIo7PreviBBVgrOqXDhywM0z&itag=134&aitags=133%2C134%2C135%2C136%2C137%2C160%2C242%2C243%2C244%2C247%2C248%2C278&source=youtube&requiressl=yes&spc=4ocVCxjPBL_u42kxzKeK6VfCDvR7Xtw&vprv=1&mime=video%2Fmp4&ns=9pjzhng0_MhwR32u5GWqeRQG&gir=yes&clen=2395203&otfp=1&dur=31.464&lmt=1605187957789558&keepalive=yes&fexp=24001373,24007246&c=WEB&n=C94C5mwOnIAh9Q&sparams=expire%2Cei%2Cip%2Cid%2Caitags%2Csource%2Crequiressl%2Cspc%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cotfp%2Cdur%2Clmt&sig=AOq0QJ8wRAIgTBbcETVP8J_lxM_hFa_Ro7Gwo4JJiAHdvoJtDaS05gACIAyExS65CbsQQ-1QkWPByjCWYtmp08fkwRlE3FNLEm3J&redirect_counter=1&cm2rm=sn-5uakl76&req_id=e15935df525fa3ee&cms_redirect=yes&cmsv=e&mh=Xq&mip=2600:8802:270d:9800:b1da:fa3f:758e:10f8&mm=34&mn=sn-a5mekn6s&ms=ltu&mt=1654754436&mv=m&mvi=4&pl=35&lsparams=mh,mip,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRAIgHFxJMyH4t0-6wQrj-_X1P44H_Qnk21inlP0nyRHMT84CIArKFUpIExpZwl2d_-Vh3Qaw4G6tEejv7A05lbWwCT5y" type="video/mp4"/>
+                </video>
+
+                {/*<h1>THIS IS A RIVER.</h1>*/}
+                {/*<h2>How majestic.</h2> */}
+                </div>
+
                 <div className="footer-basic">
                     <footer>
                         <div className="social"><a href="#"><i className="fa fa-instagram"></i></a><a
