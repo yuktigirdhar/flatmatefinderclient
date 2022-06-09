@@ -24,6 +24,8 @@ const initialState = {
 
 export default function reducer(state = initialState, action) {
     if (action.type === SET_LOOKING_FOR) {
+        console.log("action looking for")
+        console.log(action)
         return Object.assign({}, state, {
             looking_for: action.looking_for
         });

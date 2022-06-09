@@ -33,6 +33,8 @@ export class Questions extends React.Component {
     };
     user.username = this.props.currentUser.username
     if (this.props.currentUser.looking_for === "find_a_room" || this.props.currentUser.looking_for === "find_a_roommate") {
+      console.log("Submit button if")
+      console.log(this.props)
       return this.props.dispatch(lookupLatLong2(city, state))
       .then(() => {
         user.lat = this.props.latLong.lat
@@ -41,6 +43,8 @@ export class Questions extends React.Component {
       })
     }
     else {
+    console.log("Submit button else")
+    console.log(this.props)
       return this.props.dispatch(lookupLatLong(city, state, address))
     .then(() => {
       user.lat = this.props.latLong.lat

@@ -100,21 +100,20 @@ export class Dashboard extends React.Component {
 
         return (
             <div>
-                <div className="start-dashboard">
+                {/*<div className="start-dashboard">
                     <div className="abc">FIND YOUR COMFORT ZONE</div><br/>
                     <div className="abc">
                     <span>WITH BUNK UP</span>
                     </div>
-                </div>
-            <div className="top-box">
+                </div>*/}
+            {/*<div className="top-box">
                 <div className="top">Our flatmate/apartment finder platform helps users who want to relocate to<br/>
                  a foreign land by providing a one-stop platform to find compatible apartments/flatmates based on<br/>
                  their preferences and assisting them to have a smooth, stress-free transition<br/>
                  to their desired destination.</div>
-            </div>
-                <br/><br/><br/>
+            </div>*/}
             <div>
-            <div className="slideshow">
+            {/*<div className="slideshow">
                <div className="content">
                   <div className="slider-content">
                      <div className="shadow pic1"></div>
@@ -129,13 +128,10 @@ export class Dashboard extends React.Component {
                      <div className="shadow pic10"></div>
                   </div>
                </div>
-            </div>
+            </div>*/}
             </div>
             <div className="mid">
             </div>
-                <br/>
-                <div> {displayMap}</div>
-
                 {/*<div class="row">*/}
                 {/*    <br/><br/>*/}
                 {/*    <h2> Your matches </h2>*/}
@@ -146,10 +142,6 @@ export class Dashboard extends React.Component {
                 {/*        {next}*/}
                 {/*    </ul>*/}
                 {/*</div>*/}
-
-            <div> <br/> </div>
-
-<br/><br/><br/>
                 <div className="dashboard">
                 <h2><b><center>YOUR MATCHES</center></b></h2>
                 <br/>
@@ -171,7 +163,10 @@ export class Dashboard extends React.Component {
 
                             {/*<h1>THIS IS A RIVER.</h1>*/}
                             {/*<h2>How majestic.</h2> */}
+
             </div>
+                <div> {displayMap}</div>
+                <br/><br/><br/>
                 <div className="footer-basic">
                     <footer>
                         <div className="social"><a href="#"><i className="fa fa-instagram"></i></a><a

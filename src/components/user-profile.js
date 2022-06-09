@@ -277,7 +277,7 @@ export class UserProfile extends React.Component {
         </div>;
     }
 
-    let fullName = `${this.props.firstName} ${this.props.lastName}`;
+    let fullName = this.props.firstName ? `${this.props.firstName} ${this.props.lastName}` : `${this.props.username}`;
 
     return (
         <div>
