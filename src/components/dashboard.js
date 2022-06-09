@@ -99,24 +99,20 @@ export class Dashboard extends React.Component {
         }
 
         return (
-
             <div>
-            <div className="start-dashboard">
-            <div className="abc">FIND YOUR COMFORT ZONE</div><br/>
-            <div className="abc">
-              <span>WITH BUNK UP</span>
-            </div>
-            </div>
-
-
-
+                <div className="start-dashboard">
+                    <div className="abc">FIND YOUR COMFORT ZONE</div><br/>
+                    <div className="abc">
+                    <span>WITH BUNK UP</span>
+                    </div>
+                </div>
             <div className="top-box">
-            <div className="top">Our flatmate/apartment finder platform helps users who want to relocate to<br/>
-             a foreign land by providing a one-stop platform to find compatible apartments/flatmates based on<br/>
-             their preferences and assisting them to have a smooth, stress-free transition<br/>
-             to their desired destination.</div>
-</div>
-            <br/><br/><br/>
+                <div className="top">Our flatmate/apartment finder platform helps users who want to relocate to<br/>
+                 a foreign land by providing a one-stop platform to find compatible apartments/flatmates based on<br/>
+                 their preferences and assisting them to have a smooth, stress-free transition<br/>
+                 to their desired destination.</div>
+            </div>
+                <br/><br/><br/>
             <div>
             <div className="slideshow">
                <div className="content">
@@ -136,14 +132,7 @@ export class Dashboard extends React.Component {
             </div>
             </div>
             <div className="mid">
-
-
-
             </div>
-
-
-
-
                 <br/>
                 <div> {displayMap}</div>
 
@@ -175,15 +164,14 @@ export class Dashboard extends React.Component {
                 </div>
                 </div>
 
-            </div>
             <div className="videoContent">
-                            <video id="background-video" autoPlay loop muted poster="https://i.postimg.cc/Cxv074xk/home.jpg">
-                                <source src="https://rr4---sn-a5mekn6s.googlevideo.com/videoplayback?expire=1654776091&ei=u4yhYoqDHpOa2_gPhv6TwAw&ip=209.107.196.27&id=o-AFc105mFhoajK7VRp_GBFIo7PreviBBVgrOqXDhywM0z&itag=134&aitags=133%2C134%2C135%2C136%2C137%2C160%2C242%2C243%2C244%2C247%2C248%2C278&source=youtube&requiressl=yes&spc=4ocVCxjPBL_u42kxzKeK6VfCDvR7Xtw&vprv=1&mime=video%2Fmp4&ns=9pjzhng0_MhwR32u5GWqeRQG&gir=yes&clen=2395203&otfp=1&dur=31.464&lmt=1605187957789558&keepalive=yes&fexp=24001373,24007246&c=WEB&n=C94C5mwOnIAh9Q&sparams=expire%2Cei%2Cip%2Cid%2Caitags%2Csource%2Crequiressl%2Cspc%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cotfp%2Cdur%2Clmt&sig=AOq0QJ8wRAIgTBbcETVP8J_lxM_hFa_Ro7Gwo4JJiAHdvoJtDaS05gACIAyExS65CbsQQ-1QkWPByjCWYtmp08fkwRlE3FNLEm3J&redirect_counter=1&cm2rm=sn-5uakl76&req_id=e15935df525fa3ee&cms_redirect=yes&cmsv=e&mh=Xq&mip=2600:8802:270d:9800:b1da:fa3f:758e:10f8&mm=34&mn=sn-a5mekn6s&ms=ltu&mt=1654754436&mv=m&mvi=4&pl=35&lsparams=mh,mip,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRAIgHFxJMyH4t0-6wQrj-_X1P44H_Qnk21inlP0nyRHMT84CIArKFUpIExpZwl2d_-Vh3Qaw4G6tEejv7A05lbWwCT5y" type="video/mp4"/>
-                            </video>
+                <video id="background-video" autoPlay loop muted poster="https://i.postimg.cc/Cxv074xk/home.jpg">
+                    <source src="https://rr4---sn-a5mekn6s.googlevideo.com/videoplayback?expire=1654776091&ei=u4yhYoqDHpOa2_gPhv6TwAw&ip=209.107.196.27&id=o-AFc105mFhoajK7VRp_GBFIo7PreviBBVgrOqXDhywM0z&itag=134&aitags=133%2C134%2C135%2C136%2C137%2C160%2C242%2C243%2C244%2C247%2C248%2C278&source=youtube&requiressl=yes&spc=4ocVCxjPBL_u42kxzKeK6VfCDvR7Xtw&vprv=1&mime=video%2Fmp4&ns=9pjzhng0_MhwR32u5GWqeRQG&gir=yes&clen=2395203&otfp=1&dur=31.464&lmt=1605187957789558&keepalive=yes&fexp=24001373,24007246&c=WEB&n=C94C5mwOnIAh9Q&sparams=expire%2Cei%2Cip%2Cid%2Caitags%2Csource%2Crequiressl%2Cspc%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cotfp%2Cdur%2Clmt&sig=AOq0QJ8wRAIgTBbcETVP8J_lxM_hFa_Ro7Gwo4JJiAHdvoJtDaS05gACIAyExS65CbsQQ-1QkWPByjCWYtmp08fkwRlE3FNLEm3J&redirect_counter=1&cm2rm=sn-5uakl76&req_id=e15935df525fa3ee&cms_redirect=yes&cmsv=e&mh=Xq&mip=2600:8802:270d:9800:b1da:fa3f:758e:10f8&mm=34&mn=sn-a5mekn6s&ms=ltu&mt=1654754436&mv=m&mvi=4&pl=35&lsparams=mh,mip,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRAIgHFxJMyH4t0-6wQrj-_X1P44H_Qnk21inlP0nyRHMT84CIArKFUpIExpZwl2d_-Vh3Qaw4G6tEejv7A05lbWwCT5y" type="video/mp4"/>
+                </video>
 
                             {/*<h1>THIS IS A RIVER.</h1>*/}
                             {/*<h2>How majestic.</h2> */}
-                            </div>
+            </div>
                 <div className="footer-basic">
                     <footer>
                         <div className="social"><a href="#"><i className="fa fa-instagram"></i></a><a
@@ -193,6 +181,7 @@ export class Dashboard extends React.Component {
                         <p className="copyright">bunkup@uci.edu</p>
                     </footer>
                 </div>
+
         </div>
         );
     }
