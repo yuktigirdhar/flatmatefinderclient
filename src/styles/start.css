@@ -1,5 +1,5 @@
 .wrapper {
-        width: 80%;
+        width: 90%;
         text-align: center;
       }
       .polaroid {
@@ -30,7 +30,7 @@
       }
       .item:nth-of-type(2n+1) .polaroid:before {
         transform: rotate(6deg);
-        height: 20%;
+        height: 60%;
         width: 47%;
         bottom: 30px;
         right: 12px;
@@ -110,6 +110,28 @@ h1 {text-align: center;}
 
 .section:hover {
     background-color:rgb(108, 108, 128);  
+}
+
+@media (max-width: 575px) {
+    .u-section-1 .u-sheet-1 {
+        min-height: 428px;
+    }
+
+    .u-section-1 .u-text-1 {
+        font-size: 3.75rem;
+        width: 340px;
+    }
+
+    .u-section-1 .u-text-2 {
+        width: 340px;
+    }
+
+    .u-section-1 .u-video-1 {
+        height: 257px;
+        width: auto;
+        margin-right: initial;
+        margin-left: initial;
+    }
 }
 
 @media screen and (max-width: 1000px) {
