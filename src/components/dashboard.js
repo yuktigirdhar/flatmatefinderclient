@@ -58,7 +58,7 @@ export class Dashboard extends React.Component {
         }
         const indexOfLastData = currentPage * dataPerPage;
         const indexOfFirstData = indexOfLastData - dataPerPage;
-         
+
         let renderCurrent;
         if (this.props.profileMatches.length === 0){
            renderCurrent = <p>Sorry, there are no apartments or roommates that match your search critera.</p>
@@ -73,9 +73,9 @@ export class Dashboard extends React.Component {
         }
         const next = (pageNumbers.length > currentPage) ? <i className="fa fa-arrow-circle-right pagination-navigation" onClick= {() => this.handleNext()} aria-hidden="true"></i> : null;
         const previous = (currentPage > 1) ? <i className="fa fa-arrow-circle-left pagination-navigation" onClick= {() => this.handlePrevious()} aria-hidden="true"></i>: null;
-          
 
-        let renderPageNumbers; 
+
+        let renderPageNumbers;
         if (pageNumbers.length > 1) {
         renderPageNumbers = pageNumbers.map(number => {
                 return (
@@ -96,13 +96,57 @@ export class Dashboard extends React.Component {
         else {
             displayMap = <div className="map-container" id="js-map"><DisplayMap/></div>
         }
-        
+
         return (
+
             <div>
+            <div className="start-dashboard">
+            <div className="abc">FIND YOUR COMFORT ZONE</div><br/>
+            <div className="abc">
+              <span>WITH BUNK UP</span>
+            </div>
+            </div>
+
+
+
+            <div className="top-box">
+            <div className="top">Our flatmate/apartment finder platform helps users who want to relocate to<br/>
+             a foreign land by providing a one-stop platform to find compatible apartments/flatmates based on<br/>
+             their preferences and assisting them to have a smooth, stress-free transition<br/>
+             to their desired destination.</div>
+</div>
+            <br/><br/><br/>
+            <div>
+            <div className="slideshow">
+               <div className="content">
+                  <div className="slider-content">
+                     <div className="shadow pic1"></div>
+                     <div className="shadow pic2"></div>
+                     <div className="shadow pic3"></div>
+                     <div className="shadow pic4"></div>
+                     <div className="shadow pic5"></div>
+                     <div className="shadow pic6"></div>
+                     <div className="shadow pic7"></div>
+                     <div className="shadow pic8"></div>
+                     <div className="shadow pic9"></div>
+                     <div className="shadow pic10"></div>
+                  </div>
+               </div>
+            </div>
+            </div>
+            <div className="mid">
+
+
+
+            </div>
+
+
+
+
                 <br/>
                 <div> {displayMap}</div>
 
-                {/*<div class="row">*/}
+                {/*<div className="row">*/}
                 {/*    <br/><br/>*/}
                 {/*    <h2> Your matches </h2>*/}
                 {/*    {renderCurrent}*/}
@@ -113,10 +157,14 @@ export class Dashboard extends React.Component {
                 {/*    </ul>*/}
                 {/*</div>*/}
 
-            <div className="dashboard">
+            <div> <br/> </div>
 
-                <div className="dashboard-half">
-                    <h2> Your matches </h2>
+<br/><br/><br/>
+                <div className="dashboard">
+                <h2><b><center>YOUR MATCHES</center></b></h2>
+                <br/>
+                    <div className="matches">
+
                     {renderCurrent}
                     <ul id='page-numbers'>
                         {previous}
@@ -124,13 +172,7 @@ export class Dashboard extends React.Component {
                         {next}
                     </ul>
                 </div>
-                <div className="dashboard-half">
-                    <br/>
-                    <br/><br/><br/><br/>
-                    <br/><br/>
-                    <img src="https://iili.io/Xskte4.md.jpg" alt="bunk image" className="image-dashboard"/>
                 </div>
-            </div>
                 <div className="footer-basic">
                     <footer>
                         <div className="social"><a href="#"><i className="fa fa-instagram"></i></a><a
@@ -141,7 +183,7 @@ export class Dashboard extends React.Component {
                     </footer>
                 </div>
         </div>
-        );
+        );11
     }
 }
 

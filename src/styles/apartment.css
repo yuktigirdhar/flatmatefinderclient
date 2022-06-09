@@ -144,15 +144,26 @@ footer .credits {
     font-size: 10px;
 }
 
+.current-apartments
+{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.address-block{
+    height: 230px;
+}
 
 #design-cast {
+
     position: relative;
     overflow: hidden;
 }
 
 .member {
     float: left;
-    width: 31%;
+    width: 100%;
     margin: 1% 1% 45px 1%;
 }
 

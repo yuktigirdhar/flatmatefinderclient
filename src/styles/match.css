@@ -1,6 +1,7 @@
 .match {
-    background-color: #cfa684;
-    padding: 30px 30px 30px 50px; 
+    background: #cfa684;
+    /*background: radial-gradient(circle, rgba(47,173,171,1) 0%, rgba(167,136,98,1) 100%);*/
+    padding: 30px 30px 30px 50px;
     margin-bottom: 40px; 
     border-radius: 5px; 
     display: block; 
@@ -10,7 +11,7 @@
 }
 
 .match:hover {
-    background-color:rgb(118, 118, 139); 
+    background-color:rgb(118, 118, 139);
 }
 
 .profilePic {
@@ -35,6 +36,6 @@
 }
 
 .img-find-apartments{
-    width: 300px !important;
+    /*width: 300px !important;*/
     height: 300px !important;
 }

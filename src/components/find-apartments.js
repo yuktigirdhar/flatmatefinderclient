@@ -156,7 +156,9 @@ export class findApartments extends React.Component {
                     <div id="design-cast">
                         <br/>
                         <h1><center> Listed Apartments</center></h1>
+                        <div className="current-apartments">
                         {currentApartments}
+                        </div>
                     </div>
 
                 </div>
