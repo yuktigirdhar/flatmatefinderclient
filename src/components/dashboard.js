@@ -62,7 +62,7 @@ export class Dashboard extends React.Component {
 
         let renderCurrent;
         if (this.props.profileMatches.length === 0){
-           renderCurrent = <p>Sorry, there are no apartments or roommates that match your search critera.</p>
+           renderCurrent = <p> <center>Sorry, there are no apartments or roommates that match your search critera.</center></p>
         }
         else {
             renderCurrent = currentMatches.slice(indexOfFirstData, indexOfLastData);
@@ -90,8 +90,8 @@ export class Dashboard extends React.Component {
         let displayMap;
         if (this.props.currentUser.lat === undefined){
             displayMap = <div className="message-container">
-                <h1>Get Started</h1>
-                <p> Please fill out the question form in navigation bar or <Link to="/questions">here</Link>.</p>
+                <h1> <center> Get Started </center></h1>
+                <p> <center> Please fill out the question form in navigation bar or <Link to="/questions">here</Link>.</center></p> <br/><br/><br/><br/><br/><br/><br/>
             </div>
         }
         else {
@@ -158,7 +158,7 @@ export class Dashboard extends React.Component {
 
             <div className="videoContent">
                 <video id="background-video" autoPlay loop muted poster="https://i.postimg.cc/Cxv074xk/home.jpg">
-                    <source src="https://rr4---sn-a5mekn6s.googlevideo.com/videoplayback?expire=1654776091&ei=u4yhYoqDHpOa2_gPhv6TwAw&ip=209.107.196.27&id=o-AFc105mFhoajK7VRp_GBFIo7PreviBBVgrOqXDhywM0z&itag=134&aitags=133%2C134%2C135%2C136%2C137%2C160%2C242%2C243%2C244%2C247%2C248%2C278&source=youtube&requiressl=yes&spc=4ocVCxjPBL_u42kxzKeK6VfCDvR7Xtw&vprv=1&mime=video%2Fmp4&ns=9pjzhng0_MhwR32u5GWqeRQG&gir=yes&clen=2395203&otfp=1&dur=31.464&lmt=1605187957789558&keepalive=yes&fexp=24001373,24007246&c=WEB&n=C94C5mwOnIAh9Q&sparams=expire%2Cei%2Cip%2Cid%2Caitags%2Csource%2Crequiressl%2Cspc%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cotfp%2Cdur%2Clmt&sig=AOq0QJ8wRAIgTBbcETVP8J_lxM_hFa_Ro7Gwo4JJiAHdvoJtDaS05gACIAyExS65CbsQQ-1QkWPByjCWYtmp08fkwRlE3FNLEm3J&redirect_counter=1&cm2rm=sn-5uakl76&req_id=e15935df525fa3ee&cms_redirect=yes&cmsv=e&mh=Xq&mip=2600:8802:270d:9800:b1da:fa3f:758e:10f8&mm=34&mn=sn-a5mekn6s&ms=ltu&mt=1654754436&mv=m&mvi=4&pl=35&lsparams=mh,mip,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRAIgHFxJMyH4t0-6wQrj-_X1P44H_Qnk21inlP0nyRHMT84CIArKFUpIExpZwl2d_-Vh3Qaw4G6tEejv7A05lbWwCT5y" type="video/mp4"/>
+                    <source src="https://rr4---sn-a5mekn6s.googlevideo.com/videoplayback?expire=1654816696&ei=WCuiYsHSC5yhpAT9s7bIAg&ip=46.246.122.116&id=o-AD2Bg_IA4QHkgllUcq6XP3_FHiB9yKl9ExZq4_Fegy19&itag=134&aitags=133%2C134%2C135%2C136%2C137%2C160%2C242%2C243%2C244%2C247%2C248%2C278&source=youtube&requiressl=yes&spc=4ocVC5AqkLUfIk83Y2RUZDPalIMp9FQ&vprv=1&mime=video%2Fmp4&ns=WV8VxBxI1NikYD9UNz5_pJYG&gir=yes&clen=2395203&otfp=1&dur=31.464&lmt=1605187957789558&keepalive=yes&fexp=24001373,24007246&c=WEB&n=juI6iwo7vCJ1YQ&sparams=expire%2Cei%2Cip%2Cid%2Caitags%2Csource%2Crequiressl%2Cspc%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cotfp%2Cdur%2Clmt&sig=AOq0QJ8wRgIhAKJJstxwlgpwN3Zf0g-XiCIBxyUdwnPbR0GTVNhsq5OOAiEA6qXSxQ0v7YyrRIROiq2XCXY3MMSZYUX9cq6ylnfQnIg%3D&rm=sn-5gols7s&req_id=76897619726da3ee&ipbypass=yes&redirect_counter=2&cm2rm=sn-a5mrz7z&cms_redirect=yes&cmsv=e&mh=Xq&mip=2600:8802:270d:9800:6dc1:15d5:3911:370c&mm=34&mn=sn-a5mekn6s&ms=ltu&mt=1654809645&mv=m&mvi=4&pl=35&lsparams=ipbypass,mh,mip,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRAIgKIA3TiR5XCt8-jSZZ5o1KaIVWlJ2Posb7tZpsZy3YaoCIB13qlPEM9goXdKvgDgrS-pDuPd4UrOcYi9nT9xdMWwy" type="video/mp4"/>
                 </video>
 
                             {/*<h1>THIS IS A RIVER.</h1>*/}
@@ -166,7 +166,7 @@ export class Dashboard extends React.Component {
 
             </div>
                 <div> {displayMap}</div>
-                <br/><br/><br/>
+                <br/><br/><br/><br/><br/><br/>
                 <div className="footer-basic">
                     <footer>
                         <div className="social"><a href="#"><i className="fa fa-instagram"></i></a><a

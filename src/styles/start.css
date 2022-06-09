@@ -66,15 +66,33 @@
         transition: all 0.35s;
       }
 
-.start {
+.start-it {
     display: flex;
     flex-direction: column;  
-    width: 100%; 
+    width: 100%;
     box-shadow: 0px 0px 10px #242424; 
     border-radius: 10px; 
     overflow: hidden;
 /*    background: url('../images/University.jpeg') no-repeat center top;*/
 }
+
+.ourBoxItem {
+    height: 100px !important;
+    align-content: center;
+    box-shadow: #484848;
+    background-color: rgba(222, 187, 158, 0.7); /*#debb9e*/
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    /*margin-top: 2px;*/
+    /*margin-bottom: 2px;*/
+}
+
+/*.ourBoxItem :hover {*/
+/*    background-color: rgba(222, 187, 158, 1);*/
+/*}*/
 
 #1{
     text-align: center;
@@ -109,9 +127,174 @@ h1 {text-align: center;}
 }
 
 .section:hover {
-    background-color:rgb(108, 108, 128);  
+    background-color:rgb(108, 108, 128);
 }
 
+/*------------------------------------*/
+
+
+.pic1{
+    background-image: url('../images/house2.png');
+    background-size: 80% 80%;
+    background-repeat:no-repeat;
+    background-color: #f7f1e6 !important;
+    background-position: center;
+}
+.pic2{
+    background-image: url('../images/bunk-bed-ladder-flat.jpeg');
+    background-size: 80% 80%;
+    background-repeat:no-repeat;
+    background-color: #f7f1e6 !important;
+    background-position: center;
+}
+.pic3{
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    background-image: url('../images/key123.jpeg');
+    background-size: 80% 80%;
+    background-repeat:no-repeat;
+    background-color: #f7f1e6 !important;
+    background-position: center;
+}
+.pic4{
+    background-image: url('https://www.homeworkhelpglobal.com/wp-content/uploads/2017/02/late-night-study.jpg');
+    background-size: 80% 80%;
+    background-repeat:no-repeat;
+    background-color: #f7f1e6 !important;
+    background-position: center;
+}
+.pic5{
+    background-image: url('https://blog.homes.com/wp-content/uploads/sites/2/2016/05/bigstock-Cozy-house-with-beautiful-land-84075557.jpg');
+    background-size: 80% 80%;
+    background-repeat:no-repeat;
+    background-color: #f7f1e6 !important;
+    background-position: center;
+}
+.pic6{
+    background-image: url('../images/darkhouse1.jpeg');
+    background-size: 80% 80%;
+    background-repeat:no-repeat;
+    background-color: #f7f1e6 !important;
+    background-position: center;
+}
+.pic7{
+    background-image: url('../images/apart2.jpeg');
+    background-size: 80% 80%;
+    background-repeat:no-repeat;
+    background-color: #f7f1e6 !important;
+    background-position: center;
+}
+.pic8{
+    background-image: url('../images/darkhome1.jpeg');
+    background-size: 80% 80%;
+    background-repeat:no-repeat;
+    background-color: #f7f1e6 !important;
+    background-position: center;
+}
+.pic9{
+    background-image: url('../images/fear.jpeg');
+    background-size: 80% 80%;
+    background-repeat:no-repeat;
+    background-color: #f7f1e6 !important;
+    background-position: center;
+}
+.pic10{
+    background-image: url('../images/logo.png');
+    background-size: 50% 30%;
+    background-repeat:no-repeat;
+    background-color: #f7f1e6 !important;
+    background-position: center;
+}
+
+.slideshow{
+    margin: 0 auto;
+    padding-top: 50px;
+    height: 550px;
+    perspective: 1000px;
+}
+.content{
+    margin: auto;
+    width: 150px;
+    perspective: 1000px;
+    position:relative;
+    padding-top: 80px;
+    transform-style: preserve-3d;
+}
+.slider-content{
+    width: 50%;
+    height: 200px;
+    position:absolute;
+    float:right;
+    animation: rotate 15s infinite linear;
+    transform-style: preserve-3d;
+}
+.slider-content:hover{
+    cursor: pointer;
+    animation-play-state: paused;
+}
+
+.shadow{
+    width:120px;
+    height:120px;
+    border:1px solid #555;
+    overflow:hidden;
+    position:absolute;
+}
+.slider-content img{
+    image-rendering: auto;
+    transition: all 300ms;
+    width: 70%;
+    height: 70%;
+}
+
+.slider-content img:hover{
+    transform: scale(1.2);
+    transition: all 300ms;
+}
+.shadow{
+    position: absolute;
+    box-shadow: 0px 0px 0px #000;
+}
+.slider-content .shadow:nth-child(1){
+    transform:rotateY(0deg) translateZ(300px);
+}
+
+.slider-content .shadow:nth-child(2){
+    transform:rotateY(40deg) translateZ(300px);
+}
+.slider-content .shadow:nth-child(3){
+    transform:rotateY(80deg) translateZ(300px);
+}
+.slider-content .shadow:nth-child(4){
+    transform:rotateY(120deg) translateZ(300px);
+}
+.slider-content .shadow:nth-child(5){
+    transform:rotateY(160deg) translateZ(300px);
+}
+.slider-content .shadow:nth-child(6){
+    transform:rotateY(200deg) translateZ(300px);
+}
+.slider-content .shadow:nth-child(7){
+    transform:rotateY(240deg) translateZ(300px);
+}
+.slider-content .shadow:nth-child(8){
+    transform:rotateY(280deg) translateZ(300px);
+}
+.slider-content .shadow:nth-child(9){
+    transform:rotateY(320deg) translateZ(300px);
+}
+
+@keyframes rotate {
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
+
+/*------------------------------------*/
 @media (max-width: 575px) {
     .u-section-1 .u-sheet-1 {
         min-height: 428px;

@@ -198,11 +198,12 @@ componentDidMount() {
       <div className="profile-cover">
         <form className="profile" onSubmit={this.props.handleSubmit(values =>
           this.onSubmit(values))}>
-          <p> Have some space that feels empty and lifeless ? Put all your worries away. You are
-           one step away from a simple, perfect solution. Fill the questionnaire below and find
-           appropriate renters who are looking to make yours their home too.</p>
+
           <h1 className="center">Questionnaire</h1>
-          <p className="center" > Fill the details of your apartment below.</p>
+            <p> <center>Have some space that feels empty and lifeless ? Put all your worries away. You are
+                one step away from a simple, perfect solution. Fill the questionnaire below and find
+                appropriate renters who are looking to make yours their home too. </center></p>
+            <p className="center" > Fill the details of your apartment below.</p>
           <br />
           {/*{ picture }*/}
           {lookingFor}
